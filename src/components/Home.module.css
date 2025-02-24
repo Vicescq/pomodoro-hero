@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 15%;
+    font-size: 2rem;
+}
+
+
+.work{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+}
+
+.break{
+    display: flex;
+    flex-direction: column;
+}

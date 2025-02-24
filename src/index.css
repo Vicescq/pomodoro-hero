@@ -1,0 +1,11 @@
+:root {
+  font-family: "Montserrat";
+
+  color: rgba(255, 255, 255);
+  background-color: #242527;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
