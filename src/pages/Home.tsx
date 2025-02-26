@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import classes from './Home.module.css'
 import royalDaysAlt from "../audio/Royal_Days_another_version.mp3"
+import PomoCard from '../components/PomoCard'
 
 function formalize(sec: number): string{
     let remainingSec = sec
@@ -16,6 +17,7 @@ function formalize(sec: number): string{
 
 function playAudio(duration: number){
     const audio = new Audio(royalDaysAlt);
+    audio.volume = .15;
     audio.play();
     setTimeout(() => {
         audio.pause();
@@ -91,6 +93,7 @@ export default function Home(){
     
     return(
         <>
+        <PomoCard/>
         <div className={classes.work}>
             work: {formalize(timeWork)}
             <button onClick={handleWorkClick}>{btnWork ? "Pause": "Start"}</button>
