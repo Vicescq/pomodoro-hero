@@ -9,6 +9,9 @@ export class Attributes{
     resistances: { [key: string]: Resistance };
     evasion: Evasion;
     recovery: Recovery;
+    strength: number;
+    intelligence: number;
+    dexterity: number;
 }
 
 
@@ -20,10 +23,14 @@ class Offense{
 }
 
 class Physical extends Offense{
-
+    strScale: number;
+    stamCost: number;
+    armourPen: number;
+    
 }
 
 class Ranged extends Offense{
+    dexScale: number;
 
 }
 
@@ -36,22 +43,25 @@ class Spell extends Offense{
 
 
 class Defense{
-    rawMitigation: number;
+    rating: number;
 }
 
 class Armour extends Defense{
-
+    block: number;
+    spellBlock: number;
+    energyShield: number;
 }
 
 class Resistance extends Defense{
-
+    suppression: number;
 }
 
 class Evasion extends Defense{
-
+    dodge: number;
+    spellDodge: number;
 }
 
 class Recovery extends Defense{
-    leech: number;
     regen: number;
+    leech: number;
 }
