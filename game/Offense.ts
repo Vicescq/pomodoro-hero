@@ -1,14 +1,10 @@
 class Offense{
-    type: "Physical" | "Ranged" | "Spell"
+    type: OffenseType;
     dmg: number;
     critchance: number;
     accuracy: number;
-    cost: number;
-    costType: string;
-    scaling: number;
-    scalingType: string;
-    pen: number;
-    penType: string;
-    statusChance: number;
-    statusType: string;
+    cost: {[key in CostType]: number};
+    scaling: {[key in ScalingType]: number};
+    pen: {[key in PenType]: number};
+    status: {[key in StatusType]: number};
 }

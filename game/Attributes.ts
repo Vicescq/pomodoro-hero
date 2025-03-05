@@ -58,20 +58,21 @@ export class Attributes{
     }
 
     // attack and defend
-    private _offense: Offense;
-    public get offense(): Offense {
+    private _offense: Offense[];
+    public get offense(): Offense[] {
         return this._offense;
     }
-    public set offense(value: Offense) {
+    public set offense(value: Offense[]) {
         this._offense = value;
     }
 
-    private _defense: Defense;
-    public get defense(): Defense {
+    private _defense: Defense[];
+    public get defense(): Defense[] {
         return this._defense;
     }
-    public set defense(value: Defense) {
+    public set defense(value: Defense[]) {
         this._defense = value;
     }
+
     
 }
