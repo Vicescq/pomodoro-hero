@@ -1,23 +1,10 @@
+type Type = "Armour" | "Resistance" | "Evasion";
+type AvoidanceType = "Block" | "Dodge" | "SpellDodge";
+type MitigationType = "Suppression" | "EnergyShield" | "Regen" | "Leech";
+
 class Defense{
+    type: Type;
     rating: number;
-}
-
-class Armour extends Defense{
-    block: number;
-    spellBlock: number;
-    energyShield: number;
-}
-
-class Resistance extends Defense{
-    suppression: number;
-}
-
-class Evasion extends Defense{
-    dodge: number;
-    spellDodge: number;
-}
-
-class Recovery extends Defense{
-    regen: number;
-    leech: number;
+    avoidance: {[key in AvoidanceType]: number};
+    mitigation: {[key in MitigationType]: number};
 }

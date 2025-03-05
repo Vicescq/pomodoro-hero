@@ -1,20 +1,14 @@
 class Offense{
+    type: "Physical" | "Ranged" | "Spell"
     dmg: number;
     critchance: number;
     accuracy: number;
-}
-
-class Physical extends Offense{
-    strScale: number;
-    stamCost: number;
-    armourPen: number;
-}
-
-class Ranged extends Offense{
-    dexScale: number;
-
-}
-
-class Spell extends Offense{
-
+    cost: number;
+    costType: string;
+    scaling: number;
+    scalingType: string;
+    pen: number;
+    penType: string;
+    statusChance: number;
+    statusType: string;
 }

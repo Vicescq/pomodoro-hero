@@ -48,7 +48,10 @@ export class Entity{
     }
 
     attack(entity: Entity){
+        this.attributes.offense
+        
         // Defense: 1st layer
-        entity.attributes.evasion.rating = 0
+        entity.attributes.evasion.rating 
+        entity.attributes.evasion.rating 
     }
 }
